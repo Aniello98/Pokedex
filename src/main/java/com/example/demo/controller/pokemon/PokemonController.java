@@ -14,14 +14,21 @@ public class PokemonController {
     private static Logger logger = LoggerFactory.getLogger(PokemonController.class);
 
     private final PokemonGetDelegate getDelegate;
+
     @Autowired
     public PokemonController(PokemonGetDelegate getDelegate) {
         this.getDelegate = getDelegate;
     }
 
     @GetMapping("pokemon/{name}")
-    public PokemonResponseBean getPokemon(@PathVariable("name") String name){
+    public PokemonResponseBean getPokemon(@PathVariable("name") String name) {
         logger.info("calling get pokemon controller with param {} ", name);
         return getDelegate.getPokemon(name);
+    }
+
+    @GetMapping("pokemon/translated/{name}")
+    public PokemonResponseBean getTranslatedPokemon(@PathVariable("name") String name) {
+        logger.info("calling get translated pokemon controller with param {} ", name);
+        return getDelegate.getTranslatedPokemon(name);
     }
 }
