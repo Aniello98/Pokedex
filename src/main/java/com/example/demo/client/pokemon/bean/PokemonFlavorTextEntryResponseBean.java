@@ -1,4 +1,4 @@
-package com.example.demo.client.bean;
+package com.example.demo.client.pokemon.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
