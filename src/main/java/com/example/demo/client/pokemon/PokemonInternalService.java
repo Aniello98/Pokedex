@@ -3,7 +3,7 @@ package com.example.demo.client.pokemon;
 import com.example.demo.client.pokemon.bean.PokemonSpecieResponseBean;
 import com.example.demo.client.pokemon.converter.PokemonSpecieResponseBeanToPokemonBeanConverter;
 import com.example.demo.exception.PokemonSpecieNotFoundException;
-import com.example.demo.service.pokemon.PokemonBean;
+import com.example.demo.service.pokemon.bean.PokemonBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

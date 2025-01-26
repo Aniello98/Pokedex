@@ -14,7 +14,7 @@ public class PokemonApiClient {
         this.webClient = WebClient.create("https://pokeapi.co/api/v2/");
     }
 
-    public PokemonSpecieResponseBean getPokemonSpecie(String name){
+    public PokemonSpecieResponseBean getPokemonSpecie(String name) {
         return webClient.get()
                 .uri("pokemon-species/" + name)
                 .retrieve()
@@ -24,6 +24,6 @@ public class PokemonApiClient {
                 )
                 .bodyToMono(PokemonSpecieResponseBean.class)
                 .block()
-               ;
+                ;
     }
 }

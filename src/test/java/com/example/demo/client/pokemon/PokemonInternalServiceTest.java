@@ -5,19 +5,15 @@ import com.example.demo.client.pokemon.bean.PokemonHabitatResponseBean;
 import com.example.demo.client.pokemon.bean.PokemonSpecieResponseBean;
 import com.example.demo.client.pokemon.converter.PokemonSpecieResponseBeanToPokemonBeanConverter;
 import com.example.demo.exception.PokemonSpecieNotFoundException;
-import com.example.demo.service.pokemon.PokemonBean;
+import com.example.demo.service.pokemon.bean.PokemonBean;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
-import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 
 import java.util.List;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;

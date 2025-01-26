@@ -1,7 +1,7 @@
 package com.example.demo.client.pokemon.converter;
 
 import com.example.demo.client.pokemon.bean.PokemonSpecieResponseBean;
-import com.example.demo.service.pokemon.PokemonBean;
+import com.example.demo.service.pokemon.bean.PokemonBean;
 import org.springframework.stereotype.Component;
 
 @Component

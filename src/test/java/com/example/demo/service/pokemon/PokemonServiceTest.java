@@ -3,6 +3,7 @@ package com.example.demo.service.pokemon;
 import com.example.demo.client.pokemon.PokemonInternalService;
 import com.example.demo.exception.InvalidInputException;
 import com.example.demo.exception.PokemonNotFoundException;
+import com.example.demo.service.pokemon.bean.PokemonBean;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -54,7 +55,7 @@ class PokemonServiceTest {
         when(pokemonInternalService.getPokemon(name)).thenReturn(pokemonBean);
 
         //when
-        PokemonBean result = sut.getPokemonByName(name);
+        PokemonBean result = sut.getPokemon(name);
         //then
         assertEquals(result, pokemonBean);
     }
@@ -66,7 +67,7 @@ class PokemonServiceTest {
         when(pokemonInternalService.getPokemon(name)).thenReturn(null);
 
         //when - then
-        assertThrows(PokemonNotFoundException.class, () -> sut.getPokemonByName(name));
+        assertThrows(PokemonNotFoundException.class, () -> sut.getPokemon(name));
     }
 
 }
